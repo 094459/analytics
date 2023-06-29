@@ -1,0 +1,35 @@
+{
+  "name": "serverless-website-analytics-test",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "diff": "cdk diff --profile rehan-demo-exported",
+    "deploy": "cdk deploy --profile rehan-demo-exported --require-approval never",
+    "build-src": "cd /Users/rehanvandermerwe/Rehan/serverless-website-analytics && npm run build-src",
+    "build-src-diff": "npm run build-src && npm run diff",
+    "build-src-deploy": "npm run build-src && npm run deploy",
+    "destroy": "cdk destroy * --profile rehan-demo-exported",
+    "npm-link": "npm link serverless-website-analytics",
+    "install-swa-construct-npm": "npm uninstall serverless-website-analytics && npm install serverless-website-analytics",
+    "install-swa-construct-locally": "npm uninstall serverless-website-analytics && npm install /Users/rehanvandermerwe/Rehan/serverless-website-analytics/dist/js/serverless-website-analytics@0.0.0.jsii.tgz"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "@types/node": "20.1.0",
+    "aws-cdk": "2.79.1",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "~5.0.4"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.79.1",
+    "constructs": "10.0.5",
+    "serverless-website-analytics": "^0.0.11",
+    "serverless-website-analytics-client": "^1.5.0",
+    "source-map-support": "^0.5.21"
+  }
+}
